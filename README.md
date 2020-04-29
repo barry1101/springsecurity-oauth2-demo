@@ -6,6 +6,6 @@ Spring Security doesn’t provide Authorization Server support, see [OAuth 2.0 M
 
 > /** deprecated */  
 > ~~@EnableAuthorizationServer~~  
-> public class OAuth2AuthorizationServerConfig extends ~~~AuthorizationServerConfigurerAdapter~~~ {  
+> public class OAuth2AuthorizationServerConfig extends ~~AuthorizationServerConfigurerAdapter~~ {  
 > &nbsp;&nbsp;&nbsp;&nbsp;// ...  
 > }
