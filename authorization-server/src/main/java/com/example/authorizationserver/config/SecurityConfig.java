@@ -14,16 +14,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf()
                 .disable()
                 .authorizeRequests()
-                .anyRequest()
-                .authenticated()
+                .mvcMatchers("/.well-known/jwks.json").permitAll()
+                .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .permitAll();
     }
 
-  @Bean
-  @Override
-  public AuthenticationManager authenticationManagerBean() throws Exception {
-    return super.authenticationManagerBean();
-  }
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
 }

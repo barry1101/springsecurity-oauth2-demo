@@ -12,6 +12,11 @@ public class User implements UserDetails {
     private String password;
     private List<GrantedAuthority> authorities;
 
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     public User(String username, String password, List<GrantedAuthority> authorities) {
         this.username = username;
         this.password = password;

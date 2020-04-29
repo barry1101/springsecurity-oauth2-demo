@@ -1,6 +1,13 @@
 server:
   port: 8082
 
+oauth2-server-url: http://localhost:8081
+
 spring:
   application:
     name: resource-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: ${oauth2-server-url}/.well-known/jwks.json

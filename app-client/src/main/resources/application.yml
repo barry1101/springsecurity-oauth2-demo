@@ -23,7 +23,7 @@ spring:
             client-secret: app_client_secret
             authorization-grant-type: authorization_code
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
-            scope: "read,write"
+            scope: message.read,message.write
             client-name: "My APP"
         provider:
           my-app:
