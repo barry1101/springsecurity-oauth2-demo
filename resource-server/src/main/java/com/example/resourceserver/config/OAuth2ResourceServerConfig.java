@@ -19,6 +19,7 @@ public class OAuth2ResourceServerConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .antMatchers("/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .oauth2ResourceServer().jwt();
